@@ -9,6 +9,9 @@ public class QuickUnion {
     private int[] id;
     public QuickUnion(int n) {
         id = new int[n];
+        for (int i = 0; i < id.length; i++) {
+            id[i]=i;
+        }
     }
 
 

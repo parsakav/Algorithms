@@ -1,6 +1,8 @@
 package disjointset;
 
 
+import java.util.Arrays;
+
 /***
  * The depth of the tree is always <= log(N)
  */
@@ -9,6 +11,13 @@ public class WeightedQuickUnion {
     private int[] size;
     public WeightedQuickUnion(int N) {
         id = new int[N];
+        for (int i = 0; i < id.length; i++) {
+            id[i]=i;
+        }
+        size = new int[N];
+
+        Arrays.fill(size,1);
+
     }
     public int root(int p) {
         while (p != id[p]) {

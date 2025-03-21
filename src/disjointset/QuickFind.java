@@ -9,6 +9,9 @@ public class QuickFind {
     private int[] id;
     public QuickFind(int N) {
         this.id = new int[N];
+        for (int i = 0; i < id.length; i++) {
+            id[i]=i;
+        }
     }
 
     /***
